@@ -84,8 +84,8 @@ doc.moveDown(0.2);
 addBulletPoint('Specialize in designing and developing scalable, secure, and high-performance web applications.');
 addBulletPoint('Contributed to national digital transformation projects: ECC-Integrated Library System, Alumni System, and Ethiopian Single Window.');
 addBulletPoint('Focus on backend development, API integration, and frontend implementation to ensure seamless data flow and efficiency.');
-addBulletPoint('Developing ongoing modifications and enhancements for the Ethiopian Electronic Single Window (ESW).');
-addBulletPoint('Implementing cross-system integrations, including National ID identity verification and external API communications.');
+addBulletPoint('Participating in national and international integrations, such as Phytosanitary application integration with IEICS and national integrations like ESW-EFDA.');
+addBulletPoint('Developing ongoing modifications for the Ethiopian Electronic Single Window (ESW) and implementing cross-system integrations including National ID.');
 doc.moveDown(0.5);
 
 // Role 3
