@@ -147,7 +147,7 @@ export function Hero() {
               Chala <span className="text-accent">Geta</span>
             </h1>
             <p className="text-[#a1a1aa] font-medium text-lg mb-4">
-              Senior Full-Stack Developer | Enterprise Integration Engineer
+              Full Stack Developer | Enterprise Integration Engineer
             </p>
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-[#71717a] mb-6 md:mb-0">
               <span className="flex items-center gap-1"><MapPin size={16} className="text-blue-500" /> Ethiopia</span>
@@ -176,7 +176,7 @@ export function Hero() {
           >
             <h3 className="text-xl font-bold text-accent mb-4">Intro</h3>
             <p className="text-[#a1a1aa] leading-relaxed">
-              A dedicated and motivated Senior Full-Stack Software Developer with a strong foundation in modern web applications, enterprise systems, and secure API integrations. Eager to leverage technical skills to build robust digital solutions that solve real-world problems.
+              A dedicated and motivated Full Stack Developer with a strong foundation in modern web applications, enterprise systems, and secure API integrations. Eager to leverage technical skills to build robust digital solutions that solve real-world problems.
             </p>
           </motion.div>
 

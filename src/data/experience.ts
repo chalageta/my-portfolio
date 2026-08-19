@@ -7,7 +7,18 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    title: "Senior Full Stack Developer",
+    title: "Frontend Developer",
+    role: "Ethiopian Disaster Risk Management Commission (EDRMC) | July 2026 - Present",
+    description: "Working as a part-time frontend developer, contributing to the development and improvement of modern web applications and digital platforms.",
+    responsibilities: [
+      "Developing responsive interfaces using React, Next.js, TypeScript, and Tailwind CSS",
+      "Translating UI/UX designs into reusable and maintainable frontend components",
+      "Integrating frontend applications with REST APIs and backend services",
+      "Implementing form workflows, data management, validation, and authentication interfaces"
+    ]
+  },
+  {
+    title: "Software Engineer",
     role: "Ethiopian Customs Commission | Dec 2023 - Present",
     description: "I specialize in designing and developing scalable, secure, and high-performance web applications using modern technologies such as React, Next.js, TypeScript, Spring Boot, PHP, and MySQL. At the Commission, I have contributed to several national digital transformation projects, including the ECC-Integrated Library System (ECC-ILS), the Ministry of Revenue and Customs Commission Alumni System, and the Ethiopian Single Window (inECC).",
     responsibilities: [

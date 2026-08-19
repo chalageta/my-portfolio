@@ -10,19 +10,19 @@ export function Certificates() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const certificates = [
     {
-      title: "IEICS ESW Certificate of Recognition",
+      title: "Certificate of Recognition (IEICS - ePhyto Integration)",
       image: "/images/ieics-esw-cert.jpg",
-      description: "Certification for Ethiopian Electronic Single Window development and integration."
+      description: "Awarded by Ethiopian Agricultural Authority for dedicated support in successfully integrating IEICS with the Ethiopian Single Window System."
     },
     {
-      title: "ILS Certificate of Appreciation",
+      title: "Certificate of Appreciation (Integrated Library Management System)",
       image: "/images/ils.jpg",
-      description: "Professional certification highlighting technical and functional expertise."
+      description: "Awarded by Ethiopian Customs Commission for outstanding contribution to the development of their Integrated Library Management System."
     },
     {
-      title: "Arifget Elearning Certification",
+      title: "Certificate of Recognition (Arifget E-Learning Platform)",
       image: "/images/arifget.jpg",
-      description: "Certificate of recognition for the Arifget Elearning project."
+      description: "Awarded by Arifget for exceptional effort, skill, and innovation in developing the Arifget E-Learning Platform."
     }
   ];
 

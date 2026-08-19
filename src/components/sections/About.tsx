@@ -10,10 +10,10 @@ export function About() {
             <SectionHeading title="About Me" />
             <div className="prose prose-lg text-[#a1a1aa] space-y-6">
               <p>
-                I am a Senior Full Stack Software Developer with strong self-commitment and a continuous passion for learning new technologies. I have hands-on experience designing, developing, and delivering scalable web applications across both frontend and backend systems.
+                I am a Full Stack Developer with strong self-commitment and a continuous passion for learning new technologies. I have hands-on experience designing, developing, and delivering scalable web applications across both frontend and backend systems.
               </p>
               <p>
-                I have worked on several impactful projects, including the ECC Integrated Library System, MOR & ECC Alumni Management Systems, and Arifget.com E-Learning Platform. Currently, I am working on the Ethiopian Single Window (ESW) project as a Senior Software Developer, contributing to national-level digital transformation initiatives.
+                I have worked on several impactful projects, including the ECC Integrated Library System, MOR & ECC Alumni Management Systems, and Arifget.com E-Learning Platform. Currently, I am working on the Ethiopian Single Window (ESW) project as a Software Developer, contributing to national-level digital transformation initiatives.
               </p>
               <p>
                 My technical expertise includes Next.js, React.js, Tailwind CSS, Node.js, Spring Boot, and backend systems using MySQL and Oracle databases. I am highly motivated, adaptable, and always eager to expand my skill set while building reliable, secure, and user-focused solutions.
@@ -64,7 +64,7 @@ export function About() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-2 pb-6 border-b border-[#141414]">
                 <div className="text-sm font-semibold text-[#71717a] uppercase tracking-wider">Role</div>
-                <div className="md:col-span-2 text-foreground font-medium">Senior Full-Stack Developer</div>
+                <div className="md:col-span-2 text-foreground font-medium">Full Stack Developer</div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-2 pb-6 border-b border-[#141414]">
                 <div className="text-sm font-semibold text-[#71717a] uppercase tracking-wider">Focus</div>

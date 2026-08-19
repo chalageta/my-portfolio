@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Chala Geta | Senior Full-Stack Software Developer",
-  description: "Portfolio of Chala Geta — Senior Full-Stack Software Developer specializing in React, Next.js, Spring Boot, Node.js, enterprise applications, APIs, databases and system integration.",
+  title: "Chala Geta | Full Stack Developer",
+  description: "Portfolio of Chala Geta — Full Stack Developer specializing in React, Next.js, Spring Boot, Node.js, enterprise applications, APIs, databases and system integration.",
   keywords: ["Chala Geta", "Full-Stack Developer", "Software Engineer", "Next.js", "React", "Spring Boot", "Node.js", "Portfolio", "Ethiopia", "System Integration"],
   authors: [{ name: "Chala Geta" }],
   creator: "Chala Geta",
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://portifolio-delta-tawny-75.vercel.app", // Update this when you attach a custom domain
-    title: "Chala Geta | Senior Full-Stack Software Developer",
-    description: "Portfolio of Chala Geta — Senior Full-Stack Software Developer specializing in React, Next.js, Spring Boot, Node.js, and system integration.",
+    title: "Chala Geta | Full Stack Developer",
+    description: "Portfolio of Chala Geta — Full Stack Developer specializing in React, Next.js, Spring Boot, Node.js, and system integration.",
     siteName: "Chala Geta Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chala Geta | Senior Full-Stack Software Developer",
-    description: "Portfolio of Chala Geta — Senior Full-Stack Software Developer",
+    title: "Chala Geta | Full Stack Developer",
+    description: "Portfolio of Chala Geta — Full Stack Developer",
   },
   icons: {
     icon: [
