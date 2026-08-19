@@ -25,8 +25,21 @@ function addBulletPoint(text) {
 doc.font('Helvetica-Bold').fontSize(28).fillColor('#111827').text('Chala Geta', { align: 'center' });
 doc.font('Helvetica-Bold').fontSize(12).fillColor(ACCENT_COLOR).text('Full Stack Developer', { align: 'center' });
 doc.moveDown(0.3);
-doc.font('Helvetica').fontSize(10).fillColor(LIGHT_TEXT)
-   .text('Addis Ababa, Ethiopia  |  chalageta21@gmail.com  |  GitHub: chalageta  |  LinkedIn: chala-geta', { align: 'center' });
+
+const contactY = doc.y;
+doc.font('Helvetica').fontSize(10);
+const text1 = 'Addis Ababa, Ethiopia  |  chalageta21@gmail.com  |  ';
+const text2 = 'GitHub: chalageta';
+const text3 = '  |  ';
+const text4 = 'LinkedIn: chala-geta';
+const totalWidth = doc.widthOfString(text1 + text2 + text3 + text4);
+const startX = (doc.page.width - totalWidth) / 2;
+
+doc.fillColor(LIGHT_TEXT).text(text1, startX, contactY, { continued: true });
+doc.fillColor(ACCENT_COLOR).text(text2, { continued: true, link: 'https://github.com/chalageta' });
+doc.fillColor(LIGHT_TEXT).text(text3, { continued: true, link: null });
+doc.fillColor(ACCENT_COLOR).text(text4, { link: 'https://www.linkedin.com/in/chala-geta' });
+doc.moveDown(0.5);
 
 // ---------------- SUMMARY ----------------
 addSectionHeader('Professional Summary');
