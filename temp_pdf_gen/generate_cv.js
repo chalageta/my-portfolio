@@ -68,7 +68,7 @@ addSectionHeader('Professional Experience');
 // Role 1
 doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Frontend Developer', { continued: true })
    .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ethiopian Disaster Risk Management Commission (EDRMC)');
-doc.font('Helvetica-Oblique').fontSize(10).text('July 2026 - Present');
+doc.font('Helvetica-Oblique').fontSize(10).fillColor(ACCENT_COLOR).text('July 2026 - Present');
 doc.moveDown(0.2);
 addBulletPoint('Working as a part-time frontend developer, contributing to the development and improvement of modern web applications.');
 addBulletPoint('Developing responsive interfaces using React, Next.js, TypeScript, and Tailwind CSS.');
@@ -79,7 +79,7 @@ doc.moveDown(0.5);
 // Role 2
 doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Software Engineer', { continued: true })
    .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ethiopian Customs Commission');
-doc.font('Helvetica-Oblique').fontSize(10).text('Dec 2024 - Present');
+doc.font('Helvetica-Oblique').fontSize(10).fillColor(ACCENT_COLOR).text('Dec 2024 - Present');
 doc.moveDown(0.2);
 addBulletPoint('Specialize in designing and developing scalable, secure, and high-performance web applications.');
 addBulletPoint('Contributed to national digital transformation projects: ECC-Integrated Library System, Alumni System, and Ethiopian Single Window.');
@@ -92,7 +92,7 @@ doc.moveDown(0.5);
 if (doc.y > 650) doc.addPage();
 doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Junior Software Developer', { continued: true })
    .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ethiopian Customs Commission');
-doc.font('Helvetica-Oblique').fontSize(10).text('Dec 2023 - Dec 2024');
+doc.font('Helvetica-Oblique').fontSize(10).fillColor(ACCENT_COLOR).text('Dec 2023 - Dec 2024');
 doc.moveDown(0.2);
 addBulletPoint('Developed and maintained components of the Ethiopian Electronic Single Window (EESW) system.');
 addBulletPoint('Participated in testing, debugging, and deploying software modules.');
@@ -102,7 +102,7 @@ doc.moveDown(0.5);
 if (doc.y > 650) doc.addPage();
 doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Internship Practitioner', { continued: true })
    .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  DAN Energy R&D');
-doc.font('Helvetica-Oblique').fontSize(10).text('Aug 2022 - Aug 2023');
+doc.font('Helvetica-Oblique').fontSize(10).fillColor(ACCENT_COLOR).text('Aug 2022 - Aug 2023');
 doc.moveDown(0.2);
 addBulletPoint('Full-time internship focused on software development and applied learning.');
 
@@ -158,7 +158,7 @@ if (doc.y > 700) doc.addPage();
 addSectionHeader('Education');
 doc.font('Helvetica-Bold').fontSize(11).fillColor(TEXT_COLOR).text('Bachelor of Technology, Information Systems', { continued: true })
    .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ambo University');
-doc.font('Helvetica-Oblique').fontSize(10).text('Oct 2019 – Jul 2022');
+doc.font('Helvetica-Oblique').fontSize(10).fillColor(ACCENT_COLOR).text('Oct 2019 – Jul 2022');
 doc.moveDown(0.2);
 addBulletPoint('Grade: 3.86');
 doc.moveDown(0.5);
