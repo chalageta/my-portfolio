@@ -64,7 +64,7 @@ addBulletPoint('Integrating frontend applications with REST APIs and backend ser
 doc.moveDown(0.5);
 
 // Role 2
-doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Software Engineer Full Stack Developer', { continued: true })
+doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Software Engineer', { continued: true })
    .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ethiopian Customs Commission');
 doc.font('Helvetica-Oblique').fontSize(10).text('Dec 2023 - Present');
 doc.moveDown(0.2);
