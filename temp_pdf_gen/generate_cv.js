@@ -79,7 +79,7 @@ doc.moveDown(0.5);
 // Role 2
 doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Software Engineer', { continued: true })
    .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ethiopian Customs Commission');
-doc.font('Helvetica-Oblique').fontSize(10).text('Dec 2023 - Present');
+doc.font('Helvetica-Oblique').fontSize(10).text('Dec 2024 - Present');
 doc.moveDown(0.2);
 addBulletPoint('Specialize in designing and developing scalable, secure, and high-performance web applications.');
 addBulletPoint('Contributed to national digital transformation projects: ECC-Integrated Library System, Alumni System, and Ethiopian Single Window.');
@@ -90,7 +90,7 @@ doc.moveDown(0.5);
 if (doc.y > 650) doc.addPage();
 doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Junior Software Developer', { continued: true })
    .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ethiopian Customs Commission');
-doc.font('Helvetica-Oblique').fontSize(10).text('Dec 2024 - Present');
+doc.font('Helvetica-Oblique').fontSize(10).text('Dec 2023 - Dec 2024');
 doc.moveDown(0.2);
 addBulletPoint('Developed and maintained components of the Ethiopian Electronic Single Window (EESW) system.');
 addBulletPoint('Participated in testing, debugging, and deploying software modules.');
