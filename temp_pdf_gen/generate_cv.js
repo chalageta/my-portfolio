@@ -44,16 +44,15 @@ doc.moveDown(0.5);
 // ---------------- SUMMARY ----------------
 addSectionHeader('Professional Summary');
 doc.font('Helvetica').fontSize(10).fillColor(TEXT_COLOR)
-   .text('I am a Full Stack Developer with strong self-commitment and a continuous passion for learning new technologies. I have hands-on experience designing, developing, and delivering scalable web applications across both frontend and backend systems. I thrive in collaborative environments and enjoy turning complex requirements into efficient, maintainable software solutions.', { align: 'justify' });
+   .text('Result-driven Full Stack Developer with strong hands-on professional experience designing, building, and maintaining scalable web applications and microservices. Expert in Java (Spring Boot) and C# (.NET) for backend services, alongside Next.js for the frontend. Strong experience with PostgreSQL schema design and query optimization, RESTful API development, and deploying containerized services (Docker, Kubernetes) within Linux environments. Proven track record of delivering reliable, high-quality software with a proactive focus on clean code, system observability (Grafana/Prometheus), and collaborative problem-solving.', { align: 'justify' });
 
 // ---------------- TECHNICAL SKILLS ----------------
 addSectionHeader('Technical Skills');
 const skills = [
-  { category: 'Frontend', items: 'React.js, Next.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Vite, React Router, Shadcn/UI' },
-  { category: 'Backend', items: 'Spring Boot, Java, Node.js, Express.js, REST APIs, SOAP APIs, JWT, OAuth 2.0, OpenID Connect' },
-  { category: 'Databases', items: 'PostgreSQL, MySQL, MariaDB, Oracle Database, Prisma, JPA / Hibernate' },
-  { category: 'Integration', items: 'REST/SOAP Integration, OAuth/OIDC, Fayda/National ID integration, API Gateway, Middleware' },
-  { category: 'DevOps & Tools', items: 'Git, GitHub, GitLab, Docker, Docker Compose, Linux, WSL, Maven' }
+  { category: 'Frontend', items: 'Next.js, React.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS' },
+  { category: 'Backend & Arch', items: 'Java, Spring Boot, C# (.NET), Microservices Architecture, RESTful APIs, Node.js' },
+  { category: 'Databases', items: 'PostgreSQL (Schema Design & Optimization), MySQL, Oracle, JPA / Hibernate' },
+  { category: 'DevOps & Tools', items: 'Kubernetes (K8s), Docker, Linux, Git, CI/CD, Prometheus, Grafana, Maven' }
 ];
 
 skills.forEach(skill => {
