@@ -64,7 +64,7 @@ addBulletPoint('Integrating frontend applications with REST APIs and backend ser
 doc.moveDown(0.5);
 
 // Role 2
-doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Full Stack Developer', { continued: true })
+doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Software Engineer Full Stack Developer', { continued: true })
    .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ethiopian Customs Commission');
 doc.font('Helvetica-Oblique').fontSize(10).text('Dec 2023 - Present');
 doc.moveDown(0.2);
@@ -151,11 +151,20 @@ doc.moveDown(0.5);
 // ---------------- CERTIFICATIONS ----------------
 if (doc.y > 700) doc.addPage();
 addSectionHeader('Certifications');
-doc.font('Helvetica-Bold').fontSize(10).fillColor(TEXT_COLOR).text('• IEICS ESW Certificate of Recognition');
-doc.moveDown(0.2);
-doc.font('Helvetica-Bold').fontSize(10).fillColor(TEXT_COLOR).text('• ILS Certificate of Appreciation');
-doc.moveDown(0.2);
-doc.font('Helvetica-Bold').fontSize(10).fillColor(TEXT_COLOR).text('• Arifget Elearning Certification');
+
+doc.font('Helvetica-Bold').fontSize(10).fillColor(TEXT_COLOR).text('• Certificate of Recognition (IEICS - ePhyto Integration)', { continued: true })
+   .font('Helvetica').fillColor(LIGHT_TEXT).text(' - Ethiopian Agricultural Authority (Oct 2025)');
+doc.font('Helvetica').fontSize(9).fillColor(LIGHT_TEXT).text('   Awarded for dedicated and professional support in successfully integrating the Integrated Export and Import Certification System with the Ethiopian Single Window System.');
+doc.moveDown(0.4);
+
+doc.font('Helvetica-Bold').fontSize(10).fillColor(TEXT_COLOR).text('• Certificate of Appreciation (Integrated Library Management System)', { continued: true })
+   .font('Helvetica').fillColor(LIGHT_TEXT).text(' - Ethiopian Customs Commission (Jun 2026)');
+doc.font('Helvetica').fontSize(9).fillColor(LIGHT_TEXT).text('   Awarded for outstanding contribution to the development of the Ethiopian Customs Commission Integrated Library Management System.');
+doc.moveDown(0.4);
+
+doc.font('Helvetica-Bold').fontSize(10).fillColor(TEXT_COLOR).text('• Certificate of Recognition (Arifget E-Learning Platform)', { continued: true })
+   .font('Helvetica').fillColor(LIGHT_TEXT).text(' - Arifget');
+doc.font('Helvetica').fontSize(9).fillColor(LIGHT_TEXT).text('   Recognized for exceptional effort, skill, and innovation in developing the Arifget E-Learning Platform.');
 
 doc.end();
 console.log('PDF generated successfully!');
