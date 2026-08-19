@@ -76,6 +76,19 @@ addBulletPoint('Translating UI/UX designs into reusable and maintainable fronten
 addBulletPoint('Integrating frontend applications with REST APIs and backend services.');
 doc.moveDown(0.5);
 
+// Role 2 (MESOB)
+if (doc.y > 650) doc.addPage();
+doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Part-Time Backend Developer', { continued: true })
+   .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ethiopian MESOB Unified Platform');
+doc.font('Helvetica-Oblique').fontSize(10).fillColor(ACCENT_COLOR).text('Jan 2026 – May 2026');
+doc.moveDown(0.2);
+addBulletPoint('Participated as a part-time backend developer in the development of the Ethiopian MESOB Unified Platform.');
+addBulletPoint('Developed and maintained backend services using Spring Boot and implemented business workflows using Camunda.');
+addBulletPoint('Participated in designing microservices architecture and integrated RESTful APIs between distributed services.');
+addBulletPoint('Worked on database design, data persistence, service-to-service integration, and system interoperability.');
+addBulletPoint('Applied scalable, modular, and maintainable backend development practices.');
+doc.moveDown(0.5);
+
 // Role 2
 doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Software Engineer', { continued: true })
    .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ethiopian Customs Commission');
