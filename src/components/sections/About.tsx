@@ -10,10 +10,16 @@ export function About() {
             <SectionHeading title="About Me" />
             <div className="prose prose-lg text-[#a1a1aa] space-y-6">
               <p>
-                I am a full-stack software developer focused on building practical, scalable digital solutions. My work spans modern frontend applications, backend services, enterprise systems, database-driven platforms, and integrations between organizations and government services.
+                I am a Senior Full Stack Software Developer with strong self-commitment and a continuous passion for learning new technologies. I have hands-on experience designing, developing, and delivering scalable web applications across both frontend and backend systems.
               </p>
               <p>
-                Alongside application development, I work with complex integration flows involving authentication, APIs, databases, middleware, and external systems.
+                I have worked on several impactful projects, including the ECC Integrated Library System, MOR & ECC Alumni Management Systems, and Arifget.com E-Learning Platform. Currently, I am working on the Ethiopian Single Window (ESW) project as a Senior Software Developer, contributing to national-level digital transformation initiatives.
+              </p>
+              <p>
+                My technical expertise includes Next.js, React.js, Tailwind CSS, Node.js, Spring Boot, and backend systems using MySQL and Oracle databases. I am highly motivated, adaptable, and always eager to expand my skill set while building reliable, secure, and user-focused solutions.
+              </p>
+              <p>
+                I thrive in collaborative environments and enjoy turning complex requirements into efficient, maintainable software solutions.
               </p>
               <p className="font-medium text-foreground">
                 Experience highlights:

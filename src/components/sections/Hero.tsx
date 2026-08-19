@@ -136,7 +136,7 @@ export function Hero() {
                 src="/images/profile.jpg" 
                 alt="Chala Geta" 
                 fill 
-                className="object-cover" 
+                className="object-cover object-top" 
                 priority
               />
             </div>
@@ -158,9 +158,11 @@ export function Hero() {
             <Button size="md" className="w-full flex items-center justify-center gap-2 bg-accent hover:bg-accent/80 text-white border-none" onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>
               <FileText size={16} /> View Portfolio
             </Button>
-            <Button size="md" variant="ghost" className="w-full flex items-center justify-center gap-2 text-[#a1a1aa] hover:text-white hover:bg-[#1f1f1f]">
-              <Download size={16} /> Download CV
-            </Button>
+            <a href="/Chala_Geta_CV.pdf" download="Chala_Geta_CV.pdf" className="w-full">
+              <Button size="md" variant="ghost" className="w-full flex items-center justify-center gap-2 text-[#a1a1aa] hover:text-white hover:bg-[#1f1f1f]">
+                <Download size={16} /> Download CV
+              </Button>
+            </a>
           </div>
         </motion.div>
 

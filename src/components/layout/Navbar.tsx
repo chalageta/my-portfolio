@@ -36,9 +36,8 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
-        {/* Logo */}
-        <Link href="#home" className="text-3xl font-black tracking-tighter text-foreground group">
-          <span className="text-accent group-hover:text-accent/80 transition-colors">C</span> H
+        <Link href="#home" className="text-2xl md:text-3xl font-black tracking-tighter text-foreground group">
+          <span className="text-accent group-hover:text-accent/80 transition-colors">Chala</span> Geta
         </Link>
 
         {/* Desktop Nav */}

@@ -15,7 +15,6 @@ export function Contact() {
           title="Get In Touch" 
           subtitle="Have a project or system to build? Send me a message and I'll get back to you as soon as possible."
         />
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
           
           {/* Send Message Form */}
@@ -26,13 +25,19 @@ export function Contact() {
 
             <h3 className="text-xl font-bold text-foreground mb-6">Send a Message</h3>
             
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form 
+              className="space-y-6" 
+              action="https://forminit.com/f/bwyvrkf2xzc" 
+              method="POST"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="sr-only">Your Name</label>
                   <input 
                     type="text" 
                     id="name" 
+                    name="fi-sender-fullName"
+                    required
                     className="w-full px-5 py-4 rounded-xl border border-[#1f1f1f] bg-[#111111] text-[#f8fafc] placeholder-[#52525b] focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent transition-all text-sm"
                     placeholder="Your Name"
                   />
@@ -42,6 +47,8 @@ export function Contact() {
                   <input 
                     type="email" 
                     id="email" 
+                    name="fi-sender-email"
+                    required
                     className="w-full px-5 py-4 rounded-xl border border-[#1f1f1f] bg-[#111111] text-[#f8fafc] placeholder-[#52525b] focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent transition-all text-sm"
                     placeholder="Your Email"
                   />
@@ -52,6 +59,8 @@ export function Contact() {
                 <label htmlFor="message" className="sr-only">Personal Message</label>
                 <textarea 
                   id="message" 
+                  name="fi-text-message"
+                  required
                   rows={5}
                   className="w-full px-5 py-4 rounded-xl border border-[#1f1f1f] bg-[#111111] text-[#f8fafc] placeholder-[#52525b] focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent transition-all text-sm resize-none"
                   placeholder="Personal Message..."

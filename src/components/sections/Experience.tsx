@@ -35,6 +35,9 @@ export function Experience() {
                   
                   <h4 className="text-lg font-bold text-foreground leading-tight mb-1">{exp.title}</h4>
                   <p className="text-sm text-accent font-medium mb-3">{exp.role}</p>
+                  {exp.description && (
+                    <p className="text-[#a1a1aa] leading-relaxed mb-4">{exp.description}</p>
+                  )}
                   
                   <ul className="space-y-2 mt-4">
                     {exp.responsibilities.slice(0, 4).map((resp, i) => (
