@@ -26,19 +26,26 @@ doc.font('Helvetica-Bold').fontSize(28).fillColor('#111827').text('Chala Geta', 
 doc.font('Helvetica-Bold').fontSize(12).fillColor(ACCENT_COLOR).text('Full Stack Developer', { align: 'center' });
 doc.moveDown(0.3);
 
-const contactY = doc.y;
+const contactY1 = doc.y;
 doc.font('Helvetica').fontSize(10);
-const text1 = 'Addis Ababa, Ethiopia  |  chalageta21@gmail.com  |  ';
-const text2 = 'GitHub: chalageta';
-const text3 = '  |  ';
-const text4 = 'LinkedIn: chala-geta';
-const totalWidth = doc.widthOfString(text1 + text2 + text3 + text4);
-const startX = (doc.page.width - totalWidth) / 2;
+const line1Text = 'Addis Ababa, Ethiopia  |  chalageta21@gmail.com';
+doc.fillColor(LIGHT_TEXT).text(line1Text, { align: 'center' });
+doc.moveDown(0.2);
 
-doc.fillColor(LIGHT_TEXT).text(text1, startX, contactY, { continued: true });
-doc.fillColor(ACCENT_COLOR).text(text2, { continued: true, link: 'https://github.com/chalageta' });
-doc.fillColor(LIGHT_TEXT).text(text3, { continued: true, link: null });
-doc.fillColor(ACCENT_COLOR).text(text4, { link: 'https://www.linkedin.com/in/chala-geta' });
+const contactY2 = doc.y;
+const t1 = 'GitHub: chalageta';
+const t2 = '  |  ';
+const t3 = 'LinkedIn: chala-geta';
+const t4 = '  |  ';
+const t5 = 'Portfolio: Live Site';
+const totalWidth2 = doc.widthOfString(t1 + t2 + t3 + t4 + t5);
+const startX2 = (doc.page.width - totalWidth2) / 2;
+
+doc.fillColor(ACCENT_COLOR).text(t1, startX2, contactY2, { continued: true, link: 'https://github.com/chalageta' });
+doc.fillColor(LIGHT_TEXT).text(t2, { continued: true, link: null });
+doc.fillColor(ACCENT_COLOR).text(t3, { continued: true, link: 'https://www.linkedin.com/in/chala-geta' });
+doc.fillColor(LIGHT_TEXT).text(t4, { continued: true, link: null });
+doc.fillColor(ACCENT_COLOR).text(t5, { link: 'https://portifolio-delta-tawny-75.vercel.app/' });
 doc.moveDown(0.5);
 
 // ---------------- SUMMARY ----------------
