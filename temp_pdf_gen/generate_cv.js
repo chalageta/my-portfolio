@@ -6,7 +6,7 @@ doc.pipe(fs.createWriteStream('../public/Chala_Geta_CV.pdf'));
 
 // Fonts and Styling
 doc.font('Helvetica-Bold').fontSize(24).text('Chala Geta', { align: 'center' });
-doc.font('Helvetica').fontSize(12).fillColor('#666666').text('Senior Full Stack Software Developer', { align: 'center' });
+doc.font('Helvetica').fontSize(12).fillColor('#666666').text('Full Stack Developer', { align: 'center' });
 doc.moveDown(0.5);
 doc.fontSize(10).text('Addis Ababa, Ethiopia | GitHub: chalageta | LinkedIn: chala-geta', { align: 'center' });
 doc.moveDown(2);
@@ -15,7 +15,7 @@ doc.moveDown(2);
 doc.fillColor('#000000').font('Helvetica-Bold').fontSize(16).text('Professional Summary');
 doc.moveTo(50, doc.y).lineTo(550, doc.y).strokeColor('#cccccc').stroke();
 doc.moveDown(0.5);
-doc.font('Helvetica').fontSize(11).text('I am a Senior Full Stack Software Developer with strong self-commitment and a continuous passion for learning new technologies. I have hands-on experience designing, developing, and delivering scalable web applications across both frontend and backend systems.\n\nI have worked on several impactful projects, including the ECC Integrated Library System, MOR & ECC Alumni Management Systems, and Arifget.com E-Learning Platform. Currently, I am working on the Ethiopian Single Window (ESW) project as a Senior Software Developer, contributing to national-level digital transformation initiatives.\n\nMy technical expertise includes Next.js, React.js, Tailwind CSS, Node.js, Spring Boot, and backend systems using MySQL and Oracle databases. I am highly motivated, adaptable, and always eager to expand my skill set while building reliable, secure, and user-focused solutions.\n\nI thrive in collaborative environments and enjoy turning complex requirements into efficient, maintainable software solutions.', { align: 'justify' });
+doc.font('Helvetica').fontSize(11).text('I am a Full Stack Developer with strong self-commitment and a continuous passion for learning new technologies. I have hands-on experience designing, developing, and delivering scalable web applications across both frontend and backend systems.\n\nI have worked on several impactful projects, including the ECC Integrated Library System, MOR & ECC Alumni Management Systems, and Arifget.com E-Learning Platform. Currently, I am working on the Ethiopian Single Window (ESW) project as a Software Developer, contributing to national-level digital transformation initiatives.\n\nMy technical expertise includes Next.js, React.js, Tailwind CSS, Node.js, Spring Boot, and backend systems using MySQL and Oracle databases. I am highly motivated, adaptable, and always eager to expand my skill set while building reliable, secure, and user-focused solutions.\n\nI thrive in collaborative environments and enjoy turning complex requirements into efficient, maintainable software solutions.', { align: 'justify' });
 doc.moveDown(1.5);
 
 // Experience
@@ -24,7 +24,7 @@ doc.moveTo(50, doc.y).lineTo(550, doc.y).strokeColor('#cccccc').stroke();
 doc.moveDown(0.5);
 // Role 1
 doc.font('Helvetica-Bold').fontSize(12).text('Ethiopian Customs Commission');
-doc.font('Helvetica-Bold').fontSize(11).text('Senior Full Stack Developer', { continued: true }).font('Helvetica-Oblique').text('  |  Dec 2023 - Present');
+doc.font('Helvetica-Bold').fontSize(11).text('Full Stack Developer', { continued: true }).font('Helvetica-Oblique').text('  |  Dec 2023 - Present');
 doc.font('Helvetica').fontSize(11).text('I specialize in designing and developing scalable, secure, and high-performance web applications using modern technologies such as React, Next.js, TypeScript, Spring Boot, PHP, and MySQL. At the Commission, I have contributed to several national digital transformation projects, including the ECC-Integrated Library System (ECC-ILS), the Ministry of Revenue and Customs Commission Alumni System, and the Ethiopian Single Window (inECC). My role focuses on backend development, API integration, and frontend implementation to ensure seamless data flow, efficiency, and user experience.');
 doc.moveDown(0.8);
 
