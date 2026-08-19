@@ -22,6 +22,12 @@ doc.moveDown(1.5);
 doc.font('Helvetica-Bold').fontSize(16).text('Experience');
 doc.moveTo(50, doc.y).lineTo(550, doc.y).strokeColor('#cccccc').stroke();
 doc.moveDown(0.5);
+// Role 0
+doc.font('Helvetica-Bold').fontSize(12).text('Ethiopian Disaster Risk Management Commission (EDRMC)');
+doc.font('Helvetica-Bold').fontSize(11).text('Frontend Developer', { continued: true }).font('Helvetica-Oblique').text('  |  July 2026 - Present');
+doc.font('Helvetica').fontSize(11).text('Working as a part-time frontend developer, contributing to the development and improvement of modern web applications and digital platforms. Developing responsive interfaces using React, Next.js, TypeScript, and Tailwind CSS. Translating UI/UX designs into reusable and maintainable frontend components. Integrating frontend applications with REST APIs and backend services. Implementing form workflows, data management, validation, and authentication interfaces.');
+doc.moveDown(0.8);
+
 // Role 1
 doc.font('Helvetica-Bold').fontSize(12).text('Ethiopian Customs Commission');
 doc.font('Helvetica-Bold').fontSize(11).text('Full Stack Developer', { continued: true }).font('Helvetica-Oblique').text('  |  Dec 2023 - Present');
