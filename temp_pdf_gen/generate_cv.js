@@ -1,90 +1,161 @@
 const PDFDocument = require('pdfkit');
 const fs = require('fs');
 
-const doc = new PDFDocument({ margin: 50 });
+const doc = new PDFDocument({ margin: 50, size: 'A4' });
 doc.pipe(fs.createWriteStream('../public/Chala_Geta_CV.pdf'));
 
-// Fonts and Styling
-doc.font('Helvetica-Bold').fontSize(24).text('Chala Geta', { align: 'center' });
-doc.font('Helvetica').fontSize(12).fillColor('#666666').text('Full Stack Developer', { align: 'center' });
-doc.moveDown(0.5);
-doc.fontSize(10).text('Addis Ababa, Ethiopia | GitHub: chalageta | LinkedIn: chala-geta', { align: 'center' });
-doc.moveDown(2);
+const ACCENT_COLOR = '#4F46E5';
+const TEXT_COLOR = '#333333';
+const LIGHT_TEXT = '#666666';
 
-// Summary
-doc.fillColor('#000000').font('Helvetica-Bold').fontSize(16).text('Professional Summary');
-doc.moveTo(50, doc.y).lineTo(550, doc.y).strokeColor('#cccccc').stroke();
-doc.moveDown(0.5);
-doc.font('Helvetica').fontSize(11).text('I am a Full Stack Developer with strong self-commitment and a continuous passion for learning new technologies. I have hands-on experience designing, developing, and delivering scalable web applications across both frontend and backend systems.\n\nI have worked on several impactful projects, including the ECC Integrated Library System, MOR & ECC Alumni Management Systems, and Arifget.com E-Learning Platform. Currently, I am working on the Ethiopian Single Window (ESW) project as a Software Developer, contributing to national-level digital transformation initiatives.\n\nMy technical expertise includes Next.js, React.js, Tailwind CSS, Node.js, Spring Boot, and backend systems using MySQL and Oracle databases. I am highly motivated, adaptable, and always eager to expand my skill set while building reliable, secure, and user-focused solutions.\n\nI thrive in collaborative environments and enjoy turning complex requirements into efficient, maintainable software solutions.', { align: 'justify' });
-doc.moveDown(1.5);
+// Helper function for Section Headers
+function addSectionHeader(title) {
+  doc.moveDown(1);
+  doc.font('Helvetica-Bold').fontSize(14).fillColor(ACCENT_COLOR).text(title.toUpperCase());
+  doc.moveTo(50, doc.y).lineTo(545, doc.y).strokeColor('#E5E7EB').lineWidth(1).stroke();
+  doc.moveDown(0.5);
+}
 
-// Experience
-doc.font('Helvetica-Bold').fontSize(16).text('Experience');
-doc.moveTo(50, doc.y).lineTo(550, doc.y).strokeColor('#cccccc').stroke();
-doc.moveDown(0.5);
-// Role 0
-doc.font('Helvetica-Bold').fontSize(12).text('Ethiopian Disaster Risk Management Commission (EDRMC)');
-doc.font('Helvetica-Bold').fontSize(11).text('Frontend Developer', { continued: true }).font('Helvetica-Oblique').text('  |  July 2026 - Present');
-doc.font('Helvetica').fontSize(11).text('Working as a part-time frontend developer, contributing to the development and improvement of modern web applications and digital platforms. Developing responsive interfaces using React, Next.js, TypeScript, and Tailwind CSS. Translating UI/UX designs into reusable and maintainable frontend components. Integrating frontend applications with REST APIs and backend services. Implementing form workflows, data management, validation, and authentication interfaces.');
-doc.moveDown(0.8);
+// Helper function for items with bullet points
+function addBulletPoint(text) {
+  doc.font('Helvetica').fontSize(10).fillColor(TEXT_COLOR).text(`•  ${text}`, { indent: 10, align: 'justify' });
+}
 
-// Role 1
-doc.font('Helvetica-Bold').fontSize(12).text('Ethiopian Customs Commission');
-doc.font('Helvetica-Bold').fontSize(11).text('Full Stack Developer', { continued: true }).font('Helvetica-Oblique').text('  |  Dec 2023 - Present');
-doc.font('Helvetica').fontSize(11).text('I specialize in designing and developing scalable, secure, and high-performance web applications using modern technologies such as React, Next.js, TypeScript, Spring Boot, PHP, and MySQL. At the Commission, I have contributed to several national digital transformation projects, including the ECC-Integrated Library System (ECC-ILS), the Ministry of Revenue and Customs Commission Alumni System, and the Ethiopian Single Window (inECC). My role focuses on backend development, API integration, and frontend implementation to ensure seamless data flow, efficiency, and user experience.');
-doc.moveDown(0.8);
+// ---------------- HEADER ----------------
+doc.font('Helvetica-Bold').fontSize(28).fillColor('#111827').text('Chala Geta', { align: 'center' });
+doc.font('Helvetica-Bold').fontSize(12).fillColor(ACCENT_COLOR).text('Full Stack Developer', { align: 'center' });
+doc.moveDown(0.3);
+doc.font('Helvetica').fontSize(10).fillColor(LIGHT_TEXT)
+   .text('Addis Ababa, Ethiopia  |  chalageta21@gmail.com  |  GitHub: chalageta  |  LinkedIn: chala-geta', { align: 'center' });
 
-// Role 2
-doc.font('Helvetica-Bold').fontSize(11).text('Junior Software Developer', { continued: true }).font('Helvetica-Oblique').text('  |  Dec 2024 - Present');
-doc.font('Helvetica').fontSize(11).text('Developed and maintained components of the Ethiopian Electronic Single Window (EESW) system, improving efficiency in customs processing. Participated in testing, debugging, and deploying software modules, ensuring high-quality and reliable system performance. Contributed to digital transformation initiatives to modernize customs operations and improve user experience.');
-doc.moveDown(0.8);
+// ---------------- SUMMARY ----------------
+addSectionHeader('Professional Summary');
+doc.font('Helvetica').fontSize(10).fillColor(TEXT_COLOR)
+   .text('I am a Full Stack Developer with strong self-commitment and a continuous passion for learning new technologies. I have hands-on experience designing, developing, and delivering scalable web applications across both frontend and backend systems. I thrive in collaborative environments and enjoy turning complex requirements into efficient, maintainable software solutions.', { align: 'justify' });
 
-// Role 3
-doc.font('Helvetica-Bold').fontSize(12).text('DAN Energy R&D');
-doc.font('Helvetica-Bold').fontSize(11).text('Internship Practitioner', { continued: true }).font('Helvetica-Oblique').text('  |  Aug 2022 - Aug 2023');
-doc.font('Helvetica').fontSize(11).text('Full-time internship focused on software development and applied learning.');
-doc.moveDown(1.5);
-
-// Education
-doc.font('Helvetica-Bold').fontSize(16).text('Education');
-doc.moveTo(50, doc.y).lineTo(550, doc.y).strokeColor('#cccccc').stroke();
-doc.moveDown(0.5);
-
-doc.font('Helvetica-Bold').fontSize(12).text('Ambo University');
-doc.font('Helvetica-Bold').fontSize(11).text('Bachelor of Technology, Information Systems', { continued: true }).font('Helvetica-Oblique').text('  |  Oct 2019 – Jul 2022');
-doc.font('Helvetica').fontSize(11).text('Grade: 3.86');
-doc.moveDown(1.5);
-
-// Skills
-doc.font('Helvetica-Bold').fontSize(16).text('Technical Skills');
-doc.moveTo(50, doc.y).lineTo(550, doc.y).strokeColor('#cccccc').stroke();
-doc.moveDown(0.5);
-
+// ---------------- TECHNICAL SKILLS ----------------
+addSectionHeader('Technical Skills');
 const skills = [
-  { category: 'Languages & Frameworks', items: 'Next.js, React.js, Tailwind CSS, Node.js, Spring Boot, PHP, TypeScript' },
-  { category: 'Databases', items: 'MySQL, Oracle' },
-  { category: 'Other Skills', items: 'Front-End Development, Full-Stack Development, API Integration' }
+  { category: 'Frontend', items: 'React.js, Next.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Vite, React Router, Shadcn/UI' },
+  { category: 'Backend', items: 'Spring Boot, Java, Node.js, Express.js, REST APIs, SOAP APIs, JWT, OAuth 2.0, OpenID Connect' },
+  { category: 'Databases', items: 'PostgreSQL, MySQL, MariaDB, Oracle Database, Prisma, JPA / Hibernate' },
+  { category: 'Integration', items: 'REST/SOAP Integration, OAuth/OIDC, Fayda/National ID integration, API Gateway, Middleware' },
+  { category: 'DevOps & Tools', items: 'Git, GitHub, GitLab, Docker, Docker Compose, Linux, WSL, Maven' }
 ];
 
 skills.forEach(skill => {
-  doc.font('Helvetica-Bold').fontSize(11).text(`${skill.category}: `, { continued: true })
-     .font('Helvetica').text(skill.items);
-  doc.moveDown(0.3);
+  doc.font('Helvetica-Bold').fontSize(10).fillColor(TEXT_COLOR).text(`${skill.category}: `, { continued: true })
+     .font('Helvetica').fillColor(LIGHT_TEXT).text(skill.items);
+  doc.moveDown(0.2);
 });
-doc.moveDown(1.5);
 
-// Certifications
-doc.font('Helvetica-Bold').fontSize(16).text('Certifications');
-doc.moveTo(50, doc.y).lineTo(550, doc.y).strokeColor('#cccccc').stroke();
+// ---------------- EXPERIENCE ----------------
+addSectionHeader('Professional Experience');
+
+// Role 1
+doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Frontend Developer', { continued: true })
+   .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ethiopian Disaster Risk Management Commission (EDRMC)');
+doc.font('Helvetica-Oblique').fontSize(10).text('July 2026 - Present');
+doc.moveDown(0.2);
+addBulletPoint('Working as a part-time frontend developer, contributing to the development and improvement of modern web applications.');
+addBulletPoint('Developing responsive interfaces using React, Next.js, TypeScript, and Tailwind CSS.');
+addBulletPoint('Translating UI/UX designs into reusable and maintainable frontend components.');
+addBulletPoint('Integrating frontend applications with REST APIs and backend services.');
 doc.moveDown(0.5);
-doc.font('Helvetica-Bold').fontSize(11).text('• IEICS ESW Certificate of Recognition');
-doc.font('Helvetica').fontSize(10).text('   Certification for Ethiopian Electronic Single Window development and integration.');
-doc.moveDown(0.3);
-doc.font('Helvetica-Bold').fontSize(11).text('• ILS Certificate of Appreciation');
-doc.font('Helvetica').fontSize(10).text('   Professional certification highlighting technical and functional expertise.');
-doc.moveDown(0.3);
-doc.font('Helvetica-Bold').fontSize(11).text('• Arifget Elearning Certification');
-doc.font('Helvetica').fontSize(10).text('   Certificate of recognition for the Arifget Elearning project.');
+
+// Role 2
+doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Full Stack Developer', { continued: true })
+   .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ethiopian Customs Commission');
+doc.font('Helvetica-Oblique').fontSize(10).text('Dec 2023 - Present');
+doc.moveDown(0.2);
+addBulletPoint('Specialize in designing and developing scalable, secure, and high-performance web applications.');
+addBulletPoint('Contributed to national digital transformation projects: ECC-Integrated Library System, Alumni System, and Ethiopian Single Window.');
+addBulletPoint('Focus on backend development, API integration, and frontend implementation to ensure seamless data flow and efficiency.');
+doc.moveDown(0.5);
+
+// Role 3
+if (doc.y > 650) doc.addPage();
+doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Junior Software Developer', { continued: true })
+   .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ethiopian Customs Commission');
+doc.font('Helvetica-Oblique').fontSize(10).text('Dec 2024 - Present');
+doc.moveDown(0.2);
+addBulletPoint('Developed and maintained components of the Ethiopian Electronic Single Window (EESW) system.');
+addBulletPoint('Participated in testing, debugging, and deploying software modules.');
+doc.moveDown(0.5);
+
+// Role 4
+if (doc.y > 650) doc.addPage();
+doc.font('Helvetica-Bold').fontSize(12).fillColor(TEXT_COLOR).text('Internship Practitioner', { continued: true })
+   .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  DAN Energy R&D');
+doc.font('Helvetica-Oblique').fontSize(10).text('Aug 2022 - Aug 2023');
+doc.moveDown(0.2);
+addBulletPoint('Full-time internship focused on software development and applied learning.');
+
+// ---------------- FEATURED PROJECTS ----------------
+if (doc.y > 650) doc.addPage();
+addSectionHeader('Featured Projects');
+
+const projects = [
+  {
+    title: 'eSWS — EAA Phytosanitary Integration',
+    tech: 'Spring Boot, MyBatis, JSP, Oracle',
+    desc: 'International system integration supporting phytosanitary-related workflows between the Ethiopian Single Window environment and external systems via API communication.'
+  },
+  {
+    title: 'Import Permit Application',
+    tech: 'Spring Boot, MyBatis, Oracle',
+    desc: 'Digital application workflow developed for the Ministry of Transport and Logistics to support import permit processing, authentication, and form workflows.'
+  },
+  {
+    title: 'EFDA Application & National ID Integration',
+    tech: 'Spring Boot, OAuth 2.0, OIDC, PKCE',
+    desc: 'Integrated National ID identity verification capabilities into government service workflows to improve secure digital identification and application processing.'
+  },
+  {
+    title: 'Integrated Library Management System',
+    tech: 'Next.js, Node.js, MySQL, Prisma, Tailwind CSS',
+    desc: 'A complete library management platform supporting catalog management, user registration, role-based access, and borrowing workflows.'
+  },
+  {
+    title: 'Business & Healthcare Websites',
+    tech: 'Next.js, Tailwind CSS, Node.js',
+    desc: 'Developed responsive, modern business portals including Michu Specialty Dental Clinic, EM Pharmaceutical, and Health Medical Trading.'
+  },
+  {
+    title: 'Arifget Elearning',
+    tech: 'Next.js, Tailwind CSS, Laravel, MySQL',
+    desc: 'An innovative e-learning platform designed to provide educational resources and interactive online learning experiences.'
+  }
+];
+
+projects.forEach(proj => {
+  if (doc.y > 700) doc.addPage();
+  
+  doc.font('Helvetica-Bold').fontSize(11).fillColor(TEXT_COLOR).text(proj.title);
+  doc.font('Helvetica-Oblique').fontSize(9).fillColor(ACCENT_COLOR).text(proj.tech);
+  doc.moveDown(0.2);
+  doc.font('Helvetica').fontSize(10).fillColor(TEXT_COLOR).text(proj.desc, { align: 'justify' });
+  doc.moveDown(0.5);
+});
+
+// ---------------- EDUCATION ----------------
+if (doc.y > 700) doc.addPage();
+addSectionHeader('Education');
+doc.font('Helvetica-Bold').fontSize(11).fillColor(TEXT_COLOR).text('Bachelor of Technology, Information Systems', { continued: true })
+   .font('Helvetica').fillColor(LIGHT_TEXT).text('  |  Ambo University');
+doc.font('Helvetica-Oblique').fontSize(10).text('Oct 2019 – Jul 2022');
+doc.moveDown(0.2);
+addBulletPoint('Grade: 3.86');
+doc.moveDown(0.5);
+
+// ---------------- CERTIFICATIONS ----------------
+if (doc.y > 700) doc.addPage();
+addSectionHeader('Certifications');
+doc.font('Helvetica-Bold').fontSize(10).fillColor(TEXT_COLOR).text('• IEICS ESW Certificate of Recognition');
+doc.moveDown(0.2);
+doc.font('Helvetica-Bold').fontSize(10).fillColor(TEXT_COLOR).text('• ILS Certificate of Appreciation');
+doc.moveDown(0.2);
+doc.font('Helvetica-Bold').fontSize(10).fillColor(TEXT_COLOR).text('• Arifget Elearning Certification');
 
 doc.end();
 console.log('PDF generated successfully!');
